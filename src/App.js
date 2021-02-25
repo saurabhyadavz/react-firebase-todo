@@ -9,6 +9,11 @@ function App() {
       <h1>Hello world</h1>
       <input/>
       <button>Add todo</button>
+      <ul>
+        {todos.map(todo => (
+          <li>{todo}</li>
+        ))}
+      </ul>
     </div>
   );
 }
