@@ -1,3 +1,3 @@
 # React-firebase-todo Application
 
-Deployed here - https://todo-app-3fdaa.web.app/
+Todo application developed using React(FrontEnd) and Firebase(Backend).
