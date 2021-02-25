@@ -1,7 +1,9 @@
 import React from 'react';
 import './Todo.css';
-import {Avatar, List,ListItem, ListItemAvatar, ListItemText}  from '@material-ui/core';;
+import {Button, List,ListItem, ListItemAvatar, ListItemText}  from '@material-ui/core';
 
+
+import db from './firebase';
 
 function Todo(props) {
     return (
@@ -10,11 +12,12 @@ function Todo(props) {
             <ListItemAvatar>
                 
             </ListItemAvatar>
-            <ListItemText primary={props.text} secondary="Dummy deadline"></ListItemText>
+            <ListItemText primary={props.todo.todo} secondary="Dummy deadline"></ListItemText>
 
             </ListItem>
+            <Button onClick={event => db.collection('todos').doc(props.todo.id).delete()}>Delete Me</Button>
         </List>
     )
 }
 
-export default Todo
+export default Todo;
